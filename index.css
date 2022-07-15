@@ -45,7 +45,7 @@ p {
 
 .current-price {
     font-size: 2rem;
-    color: hsl(158, 36%, 37%);
+    color: rgb(41, 156, 108);
     padding-right: 1.5rem;
 }
 
@@ -57,7 +57,7 @@ p {
 
 .add-to-cart-btn {
     cursor: pointer;
-    background-color: hsl(158, 36%, 37%);
+    background-color: rgb(41, 156, 108);
     color: white;
     width: 90%;
     height: 2.5rem;
@@ -69,6 +69,10 @@ p {
 .add-to-cart-btn img {
     position: relative;
     top: 2px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: hsl(158, 36%, 37%);
 }
 
 /* Combined styles */
@@ -90,4 +94,31 @@ margin-bottom: 1rem;
 
 .product-details, .add-to-cart-btn img {
 padding: 0 1rem;
+}
+
+/* tablet - desktop size 768px breakpoint */
+
+@media (min-width: 768px) {
+    .card-wrapper {
+        max-width: 600px;
+        height: 500px;
+        margin: 10rem auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+}
+    .product-img-wrapper {
+        grid-area: 1 / 1 / 6 / 2;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        margin: 0;
+}
+    .product-details {
+        grid-area: 1 / 2 / 5 / 3;
+        padding: 1rem;
+    }
+    .add-to-cart-btn {
+        grid-area: 5 / 2 / 6 / 3;
+    }
 }
