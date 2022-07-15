@@ -14,6 +14,7 @@ body {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  align-content: center;
   background-color: hsl(0, 0%, 100%);
 }
 
@@ -24,12 +25,10 @@ body {
     background-repeat: no-repeat;
     background-size:contain;
     border-radius: 5px;
-    margin-bottom: 1rem;
-    
 }
 
 .product-details {
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 1rem;
     margin-bottom: 1rem;
 }
 
@@ -59,4 +58,31 @@ p {
 
 .current-price {
     font-family: 'Fraunces', Helvetica, serif;
+    font-size: 2rem;
+    color: hsl(158, 36%, 37%);
+    padding-right: 1.5rem;
+}
+
+.old-price {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    position: relative;
+    top: -5px;
+}
+
+.add-to-cart-btn {
+    cursor: pointer;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border-radius: 5px;
+    width: 90%;
+    height: 2.5rem;
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+.add-to-cart-btn img {
+    padding: 0 1rem;
+    position: relative;
+    top: 2px;
 }
