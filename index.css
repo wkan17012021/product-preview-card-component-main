@@ -5,50 +5,37 @@
 body {
     background-color: hsl(30, 38%, 92%);
     font-family: 'Montserrat', Helvetica, sans-serif;
+    font-weight: 500;
     font-size: 14px;
 }
 
 .card-wrapper {
   max-width: 350px;
   margin: 2rem auto 10rem;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  align-content: center;
   background-color: hsl(0, 0%, 100%);
 }
 
 .product-img-wrapper {
     width: 348px;
     height: 250px;
-    background-image: url(./images/image-product-mobile.jpg);
-    background-repeat: no-repeat;
+    background: url(./images/image-product-mobile.jpg) no-repeat;
     background-size:contain;
-    border-radius: 5px;
-}
-
-.product-details {
-    padding: 0 1rem;
-    margin-bottom: 1rem;
 }
 
 h1 {
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: hsl(228, 12%, 48%);
-    margin-bottom: 1rem;
 }
 
 h2 {
-    font-family: 'Fraunces', Helvetica, serif;
     color: hsl(212, 21%, 14%);
     font-size: 2.2rem;
     font-weight: 700;
-    margin-bottom: 1rem;
 }
 
 p {
-    color: hsl(228, 12%, 48%);
     line-height: 1.5rem;
 }
 
@@ -57,14 +44,12 @@ p {
 }
 
 .current-price {
-    font-family: 'Fraunces', Helvetica, serif;
     font-size: 2rem;
     color: hsl(158, 36%, 37%);
     padding-right: 1.5rem;
 }
 
 .old-price {
-    color: hsl(228, 12%, 48%);
     text-decoration: line-through;
     position: relative;
     top: -5px;
@@ -74,15 +59,35 @@ p {
     cursor: pointer;
     background-color: hsl(158, 36%, 37%);
     color: white;
-    border-radius: 5px;
     width: 90%;
     height: 2.5rem;
     margin: 0 auto 1rem;
     display: block;
+    font-family: 'Montserrat', Helvetica, sans-serif;
 }
 
 .add-to-cart-btn img {
-    padding: 0 1rem;
     position: relative;
     top: 2px;
+}
+
+/* Combined styles */
+h2, .current-price {
+    font-family: 'Fraunces', Helvetica, serif;
+}
+
+h1, p .old-price {
+    color: hsl(228, 12%, 48%);
+}
+
+.card-wrapper, .product-img-wrapper, .add-to-cart-btn {
+    border-radius: 5px;
+}
+
+.product-details, .product-img-wrapper, h1, h2 { 
+margin-bottom: 1rem;
+}
+
+.product-details, .add-to-cart-btn img {
+padding: 0 1rem;
 }
