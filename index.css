@@ -1,7 +1,3 @@
-* {
-  border: 1px solid red;
-}
-
 body {
     background-color: hsl(30, 38%, 92%);
     font-family: 'Montserrat', Helvetica, sans-serif;
@@ -18,10 +14,11 @@ body {
 }
 
 .product-img-wrapper {
-    width: 348px;
+    width: 350px;
     height: 250px;
     background: url(./images/image-product-mobile.jpg) no-repeat;
     background-size:contain;
+    border-radius: 5px 5px 0 0;
 }
 
 h1 {
@@ -64,6 +61,7 @@ p {
     margin: 0 auto 1rem;
     display: block;
     font-family: 'Montserrat', Helvetica, sans-serif;
+    border: none;
 }
 
 .add-to-cart-btn img {
@@ -80,11 +78,11 @@ h2, .current-price {
     font-family: 'Fraunces', Helvetica, serif;
 }
 
-h1, p .old-price {
+h1, p, .old-price {
     color: hsl(228, 12%, 48%);
 }
 
-.card-wrapper, .product-img-wrapper, .add-to-cart-btn {
+.card-wrapper, .add-to-cart-btn {
     border-radius: 5px;
 }
 
@@ -111,14 +109,27 @@ padding: 0 1rem;
         grid-area: 1 / 1 / 6 / 2;
         width: 100%;
         height: 100%;
-        background-size: cover;
+        background: url(./images/image-product-desktop.jpg) no-repeat;
+        background-size:cover;
         margin: 0;
+        border-radius: 5px 0 0 5px;
 }
     .product-details {
         grid-area: 1 / 2 / 5 / 3;
-        padding: 1rem;
+        padding: 2rem 1.25rem 1rem 1.5rem;
+    }
+    h1 {
+        margin-bottom: 2rem;
+    }
+    p {
+        padding-right: 1rem;
+    }
+    .price-wrapper {
+        margin: 3rem auto 1rem;
     }
     .add-to-cart-btn {
         grid-area: 5 / 2 / 6 / 3;
+        width: 80%;
+        margin: auto auto;
     }
 }
